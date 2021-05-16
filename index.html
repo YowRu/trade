@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="DC.Title" content="BEST500" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/loading.js"></script>
+    <link rel="stylesheet" href="css/layout.css" type="text/css">
+    <link rel="stylesheet" href="css/font/flaticon.css" type="text/css">
+    <title>Trade</title>
+</head>
+<body>
+<header></header>
+<div id="main">
+    <div class="top">
+        <div class="chart"><img src="img/chart.png" alt=""></div>
+        <div class="info">
+            <div class="one">
+                <p class="title">價值</p>
+                <div class="input"><input type="text" onkeyup="this.value=this.value.replace(/[^\d]/,'')"></div>
+                <ul class="btnWP">
+                    <li>+5</li>
+                    <li>+10</li>
+                    <li>+20</li>
+                    <li>+50</li>
+                    <li>+100</li>
+                    <li>AII</li>
+                </ul>
+            </div>
+            <div class="two">
+                <p class="title">利潤</p>
+                <div class="flex">
+                    <span>95%</span>
+                    <span>+19.50K</span>
+                </div>
+            </div>
+            <div class="three">
+                <p class="title">心理指標</p>
+                <div class="round">
+                    <div class="red"></div>
+                    <div class="green"></div>
+                </div>
+                <div class="text">
+                    <div class="red">81%</div>
+                    <div class="green">19%</div>
+                </div>
+            </div>
+            <div class="four">
+                <div class="btn green">
+                    <span>增加</span>
+                    <img src="img/up.png" alt="">
+                </div>
+                <div class="btn">
+                    <p>下訂單</p>
+                    <p>10s</p>
+                </div>
+                <div class="btn red">
+                    <span>減少</span>
+                    <img src="img/down.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile">
+        <div class="top">
+            <div class="info">
+                <p class="title">心理指標</p>
+                <div class="three">
+                    <div class="round">
+                        <div class="red"></div>
+                        <div class="green"></div>
+                    </div>
+                    <div class="text">
+                        <div class="red">81%</div>
+                        <div class="green">19%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="downWp">
+        <div class="down">
+            <div class="circle"></div>
+            <div class="right">
+                <div class="top">
+                    <img src="img/upGreen.png" alt="">
+                    <span class="green">29</span>
+                </div>
+                <div class="down">
+                    <img src="img/downRed.png" alt="">
+                    <span class="red">26</span>
+                </div>
+            </div>
+        </div>
+        <div class="blank"></div>
+    </div>
+    <div class="mobile">
+        <div class="one">
+            <p class="title">利潤</p>
+            <div class="flex">
+                <span>95%</span>
+                <span>+19.50K</span>
+            </div>
+        </div>
+        <div class="two">
+            <div class="row1">
+                <div class="btn">-</div>
+                <div class="input"><input type="text" onkeyup="this.value=this.value.replace(/[^\d]/,'')"></div>
+                <div class="btn">+</div>
+            </div>
+            <div class="row2">
+                <div class="btn red">
+                    <span>減少</span>
+                    <img src="img/down.png" alt="">
+                </div>
+                <div class="btn">
+                    <p>下訂單</p>
+                    <p>10s</p>
+                </div>
+                <div class="btn green">
+                    <span>增加</span>
+                    <img src="img/up.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer></footer>
+    
+<script>
+$(document).ready(function() {
+    for(let i=0;i<60;i++){
+        $('.down .circle').append('<div class="item"><p></p></div>');
+    }
+    let H = $('#main .top .info').height();
+    let blankH = $('#main .downWp').height();
+    let windowH =$(window).height();
+    let documentH = $(document).height();
+    $('#main .top .chart img').height(H);
+    $('#main .downWp .blank').height(blankH);
+    if(windowH - documentH < 52){
+        $('#main').css({'margin-bottom':'57px'});
+    }
+    if($(window).width()<=400){
+            $('#main .top .chart img').height(windowH*0.35);
+        }else if($(window).width()<=500){
+            $('#main .top .chart img').height(windowH*0.4);
+        }else if($(window).width()<=1000){
+            $('#main .top .chart img').height(windowH/3);
+        }else{
+            $('#main .top .chart img').height(H);
+        }
+
+    $('#main .mobile .two .row1 .btn:nth-child(1)').on('keydown', function(e){
+        alert( e.which );
+        $(this).css({'background-color':'#f46173'});
+    });
+    $('#main .mobile .two .row1 .btn:nth-child(2)').on('keydown', function(e){
+        $(this).css({'background-color':'#32baa1'});
+    });
+
+
+    $(window).resize(function(){
+        if($(window).width()<=400){
+            $('#main .top .chart img').height(windowH*0.35);
+        }else if($(window).width()<=500){
+            $('#main .top .chart img').height(windowH*0.4);
+        }else if($(window).width()<=1000){
+            $('#main .top .chart img').height(windowH/3);
+        }else{
+            let H = $('#main .top .info').height();
+            $('#main .top .chart img').height(H);
+        }
+        if(windowH - documentH < 52){
+            $('#main').css({'margin-bottom':'57px'});
+        }
+    });
+    
+});
+   
+</script>    
+</body>
+</html>

@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?2d214c63b13ab7ff384189e61bd31dfa") format("truetype"),
+url("./flaticon.woff?2d214c63b13ab7ff384189e61bd31dfa") format("woff"),
+url("./flaticon.woff2?2d214c63b13ab7ff384189e61bd31dfa") format("woff2"),
+url("./flaticon.eot?2d214c63b13ab7ff384189e61bd31dfa#iefix") format("embedded-opentype"),
+url("./flaticon.svg?2d214c63b13ab7ff384189e61bd31dfa#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1.3rem;text-align: center;margin: 0 auto 5px;display: block;
+}
+
+.flaticon-chart:before {
+    content: "\f101";
+}
+.flaticon-transaction:before {
+    content: "\f102";
+}
+.flaticon-money-graph-with-up-arrow:before {
+    content: "\f103";
+}
+.flaticon-stock-market:before {
+    content: "\f104";
+}
+.flaticon-graph:before {
+    content: "\f105";
+}
+.flaticon-pie-chart:before {
+    content: "\f106";
+}

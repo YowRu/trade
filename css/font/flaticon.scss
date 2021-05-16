@@ -1,0 +1,49 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?2d214c63b13ab7ff384189e61bd31dfa") format("truetype"),
+url("./flaticon.woff?2d214c63b13ab7ff384189e61bd31dfa") format("woff"),
+url("./flaticon.woff2?2d214c63b13ab7ff384189e61bd31dfa") format("woff2"),
+url("./flaticon.eot?2d214c63b13ab7ff384189e61bd31dfa#iefix") format("embedded-opentype"),
+url("./flaticon.svg?2d214c63b13ab7ff384189e61bd31dfa#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "chart": "\f101",
+    "transaction": "\f102",
+    "money-graph-with-up-arrow": "\f103",
+    "stock-market": "\f104",
+    "graph": "\f105",
+    "pie-chart": "\f106",
+);
+
+.flaticon-chart:before {
+    content: map-get($flaticon-map, "chart");
+}
+.flaticon-transaction:before {
+    content: map-get($flaticon-map, "transaction");
+}
+.flaticon-money-graph-with-up-arrow:before {
+    content: map-get($flaticon-map, "money-graph-with-up-arrow");
+}
+.flaticon-stock-market:before {
+    content: map-get($flaticon-map, "stock-market");
+}
+.flaticon-graph:before {
+    content: map-get($flaticon-map, "graph");
+}
+.flaticon-pie-chart:before {
+    content: map-get($flaticon-map, "pie-chart");
+}
