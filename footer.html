@@ -1,13 +1,13 @@
 <body>
     <ul class="row1">
         <li>
-            <a href="">
+            <a href="index.html">
                 <i class="flaticon-money-graph-with-up-arrow"></i>
                 <p>Trade</p>
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="market.html">
                 <i class="flaticon-chart"></i>
                 <p>Market</p>
             </a>
@@ -25,4 +25,8 @@
             </a>
         </li>
     </ul>
+    <script>
+       let pageNo = $('.pageNo').text();
+       $('footer .row1 li').eq(pageNo).addClass('current');
+    </script>
 </body>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="DC.Title" content="BEST500" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/loading.js"></script>
+    <link rel="stylesheet" href="css/font/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/faq.css" type="text/css">
+    <title>Trade</title>
+</head>
+<body>
+  <div class="header"><a href="index.html">﹤</a><div class="title">常見問題</div></div>
+  <div class="section">
+    <div class="row">
+      <p class="question">1. 什麼是TECHPLAY價格指標？</p>
+      <div class="answer">TECHPLAY是種信譽良好、公允且使用過的價格指數，用於衡量匯率波動。當前，TECHPLAY指數是根據Binance交易所的數據進行計算和發佈的。</div>
+    </div>
+    <div class="row">
+      <p class="question">2. 什麼是二元期權？</p>
+      <div class="answer">二元期權是一種金融產品，具有2種期權中的1種，其收益基於美元期權是否到期：固定金額或無。它們是通用的，因為二元期權vi只能有2個結果。定時二進制選項再將基礎資產的價格與行使價進行比較時，格蘭到期了：在執行價格的右邊，交易者獲利;否則，交易者將失去期權。</div>
+    </div>
+    <div class="row">
+      <p class="question">3. 如何設置TECHPLAY優先權？</p>
+      <div class="answer">通過Binance交易所直接通過API獲得的數量和價格數據為用於計算TECHPLAY的加權指數。<br>要檢測並刪除格式錯誤和異常的數據，將使用特定用過的方法。<br>在TECHPLAY中，由於保留費用，排除了提供組成djch交換的TECHPLAY權重myc，最後更新時間為2020年4月20日世界標準時間12:00:05。<br>下表顯示索引的權重。<br><table><tr><th></th>
+      <th>幣安</th></tr><tr><td>BTC / USDT</td><td>100.00%</td></tr></table></div>
+    </div>
+    <div class="row">
+      <p class="question">4. 如何計算TECHPLAY價格指標？</p>
+      <div class="answer">
+        <span>2020年4月20日世界標準時間00:00，交易所的最終價格為:</span>
+        <table>
+          <tr>
+            <th></th>
+            <th>幣安</th>
+          </tr>
+          <tr>
+            <td>最後價格</td>
+            <td>6,877.44</td>
+          </tr>
+        </table>
+        <span>最後價格乘以上述權重:</span>
+        <table>
+          <tr>
+            <th></th>
+            <th>幣安</th>
+          </tr>
+          <tr>
+            <td>最後價格</td>
+            <td>6,877.44</td>
+          </tr>
+          <tr>
+            <th>BTC / USDT</th>
+            <th>100.00%</th>
+          </tr>
+          <tr>
+            <td>最後價格 X 比例</td>
+            <td>6,877.44</td>
+          </tr>
+        </table>
+        <span>最終價格x所有價格要素的權重是6,877.44。 依此類推，BTC / USDT價格為6,877.44(上午，四捨五入至最接近美元)</span>
+      </div>
+    </div>
+    <div class="row">
+      <p class="question">5. 交易中使用的流行術語？</p>
+      <div class="answer">總收益是您從交易時段賺取的錢。<br>利潤=總利潤-總虧損(您從虧損交易中損失的所有資金）。<br>增加意味按下此按鈕，您將生成一個新的UP命令。減少意味按下此按鈕，將生成一個新的DOWN的命令。<br>打開包含您正在等待結果的訂單。已關閉的訂單包含您過去下訂過的訂單。<br>情緒指標顯示該資產所有未平倉交易的比率。紅色表示交易數量Glam，綠色代表gla交易數量。<br><img src="img/mood.png" class="pc" alt=""><img src="img/mood_m.png" class="mobile" alt=""><br>最終結果將顯示最新的指標，紅色表示下跌交易，綠色表示上升。<br><img src="img/dot.png" class="pc" alt=""><img src="img/dot_m.png" class="mobile" alt=""><br>等待的時間:屆時，您將等待結果。<br>交易時間:您可以下訂單的時間。</div>
+    </div>
+    <div class="row">
+      <p class="question">6. 如何下單？</p>
+      <div class="answer">如何在交易中打開訂單？<br>1.選擇您要一次下單中的金額。<br><img src="img/1.png" class="pc"alt=""><img src="img/3.png" class="mobile" alt=""><br>2.按下增加或減少按鈕下訂單，您要下訂單的數量沒有限制<br><img src="img/2.png" class="pc"alt=""><img src="img/4.png" class="mobile"alt=""></div>
+    </div>
+  </div>
+  <script>
+    $('.section .row .question').click(function(){
+      $(this).siblings('.section .row .answer').toggle();
+    });
+  </script>
+</body>
+</html>

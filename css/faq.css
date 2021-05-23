@@ -1,0 +1,45 @@
+*{margin:0;padding:0;}
+body{background-color:#0f063b;}
+.header{position: relative;height: 80px;}
+.header a,.header .title{color: #fff;font-size: 1.2rem;line-height: 80px;}
+.header a{left: 20px;top:0;position: absolute;text-decoration: none;font-weight: 600;}
+.header .title{text-align: center;}
+.section .row{max-width:1400px;width:90%;margin:0 auto 10px;}
+.section .row .question{background-color:#0689fa;color: #fff;padding:15px 20px;margin-bottom: 0;font-size:1.1rem;border-radius: 5px;position: relative;cursor: pointer;}
+.section .row .question:active{background-color:#529fe1;transition: all 0.2s;}
+.section .row .question:after{content:'﹥';color:#fff;font-size: 1.1rem;font-weight: 600;position: absolute;right:20px;top:12px;}
+.section .row .answer{background-color:#3c3559;padding:20px;margin-top: 0;color:#fff;line-height: 1.4rem;font-size:1rem;border-radius: 3px;display: none;} 
+.section .row .answer table{border-collapse:collapse;border:3px solid #655d90;margin: 20px auto 0;}
+.section .row .answer table th,.section .row .answer table td{border:3px solid #655d90;font-size:1.1rem;padding: 15px 0;width:200px;text-align: center;}
+.section .row:nth-child(4) .answer span:last-child{margin-top:20px;display: inline-block;}
+.section .row .answer img{display: block;max-width:90%;height:200px;margin: 20px auto;}
+.section .row .answer img.mobile{display: none;}
+@media(max-width:1000px){
+  .section .row .answer img{height: 150px;}
+}
+@media(max-width:700px){
+  .section .row .answer img.mobile{display: block;height: auto;width: 70%;margin: 20px auto 0;}
+  .section .row .answer img.pc{display: none;}
+}
+@media(max-width:500px){
+  .section .row .answer img.mobile{width:80%;}
+  .section .row:last-child .answer img.mobile{width:auto;height: 50px;}
+  .section .row:last-child .answer img.mobile:last-child{height: 100px;}
+  .section .row .question:after{top:15px;}
+}
+@media(max-width:414px){
+  .section .row .question,
+  .section .row .question:after,
+  .section .row .answer,
+  .section .row .answer table th,.section .row .answer table td{font-size:1rem;}
+}
+@media(max-width:350px){
+  .section .row .question,
+  .section .row .question:after,.section .row .answer,
+  .section .row .answer table th,.section .row .answer table td{font-size:0.9rem;}
+}
+@media(max-width:300px){
+  .section .row .question,
+  .section .row .question:after,.section .row .answer,
+  .section .row .answer table th,.section .row .answer table td{font-size:0.8rem;}
+}

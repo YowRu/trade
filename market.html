@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="DC.Title" content="BEST500" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/loading.js"></script>
+    <link rel="stylesheet" href="css/font/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/faq.css" type="text/css">
+    <title>Trade</title>
+</head>
+<style>
+#main{display: flex;justify-content: space-between;align-items: center;flex-wrap: wrap;}
+#main .row{display: flex;justify-content: space-between;align-items: center;color:#fff;background-color:#3d365a;
+width:45%;padding:10px;border-radius:10px;margin:0 auto 10px;}
+#main .row .trade{display: flex;justify-content: center;align-items: center;width: 100px;}
+#main .row .trade .money{width:85%;text-align: right;}
+#main .row .trade img{display: block;border-radius:3px;width:20px;margin:0 15px;}
+@media(max-width:700px){
+  #main .row{width: 90%;}
+}
+@media(max-width:315px){
+  #main .row{font-size:0.8rem;}
+}
+</style>
+<body>
+  <div class="header"><div class="title">Market</div></div>
+  <div id="main">
+    <div class="row">
+      <div class="name">b***n</div>
+      <div class="trade">
+        <div class="money">1,000k</div>
+        <img src="img/green.png" alt="">
+      </div>
+      <div class="time">09:56:18</div>
+    </div>
+    <div class="row">
+      <div class="name">d***t</div>
+      <div class="trade">
+        <div class="money">300k</div>
+        <img src="img/red.png" alt="">
+      </div>
+      <div class="time">09:56:18</div>
+    </div>
+    <div class="row">
+      <div class="name">s***y</div>
+      <div class="trade">
+        <div class="money">80k</div>
+        <img src="img/red.png" alt="">
+      </div>
+      <div class="time">09:56:18</div>
+    </div>
+    <div class="row">
+      <div class="name">b***n</div>
+      <div class="trade">
+        <div class="money">10k</div>
+        <img src="img/green.png" alt="">
+      </div>
+      <div class="time">09:56:18</div>
+    </div>
+    <div class="row">
+      <div class="name">C***y</div>
+      <div class="trade">
+        <div class="money">500k</div>
+        <img src="img/green.png" alt="">
+      </div>
+      <div class="time">09:56:18</div>
+    </div>
+    <div class="row">
+      <div class="name">M***3</div>
+      <div class="trade">
+        <div class="money">27k</div>
+        <img src="img/red.png" alt="">
+      </div>
+      <div class="time">09:56:18</div>
+    </div>
+    <div class="pageNo">1</div>
+  </div>
+  <footer></footer>
+</body>
+</html>

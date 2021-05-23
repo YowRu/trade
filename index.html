@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="four">
-                <div class="btn green">
+                <div class="btn green trade">
                     <span>增加</span>
                     <img src="img/up.png" alt="">
                 </div>
@@ -57,7 +57,7 @@
                     <p>下訂單</p>
                     <p>10s</p>
                 </div>
-                <div class="btn red">
+                <div class="btn red trade">
                     <span>減少</span>
                     <img src="img/down.png" alt="">
                 </div>
@@ -80,7 +80,6 @@
                 </div>
             </div>
         </div>
-        
     </div>
     <div class="downWp">
         <div class="down">
@@ -108,12 +107,12 @@
         </div>
         <div class="two">
             <div class="row1">
-                <div class="btn">-</div>
+                <a id="decrease" class="btn red">-</a>>
                 <div class="input"><input type="text" onkeyup="this.value=this.value.replace(/[^\d]/,'')"></div>
-                <div class="btn">+</div>
+                <a class="btn green" id="add">+</a>
             </div>
             <div class="row2">
-                <div class="btn red">
+                <div class="btn red trade">
                     <span>減少</span>
                     <img src="img/down.png" alt="">
                 </div>
@@ -121,13 +120,24 @@
                     <p>下訂單</p>
                     <p>10s</p>
                 </div>
-                <div class="btn green">
+                <div class="btn green trade">
                     <span>增加</span>
                     <img src="img/up.png" alt="">
                 </div>
             </div>
         </div>
     </div>
+    <div class="sliderInfo">
+        <div class="info">
+            <p>溫馨提醒 <span>x</span></p>
+            <span>請登入或註冊得以繼續交易</span>
+            <div class="btnWP">
+                <a class="btn" href="#">登入</a>
+                <a class="btn" href="#">註冊</a>
+            </div>
+        </div>
+    </div>
+    <div class="pageNo">0</div>
 </div>
 <footer></footer>
     
@@ -155,16 +165,19 @@ $(document).ready(function() {
             $('#main .top .chart img').height(H);
         }
 
-    $('#main .mobile .two .row1 .btn:nth-child(1)').on('keydown', function(e){
-        alert( e.which );
-        $(this).css({'background-color':'#f46173'});
-    });
-    $('#main .mobile .two .row1 .btn:nth-child(2)').on('keydown', function(e){
-        $(this).css({'background-color':'#32baa1'});
-    });
+    /*click btn*/
+$('#main .trade').click(function(){
+    $('.sliderInfo').show();
+    $('#main .sliderInfo .info').animate({'top':(windowH-166)/2});
+});
+$('#main .sliderInfo .info p span').click(function(){
+    $('#main .sliderInfo .info').animate({'top':-166});
+    setTimeout( '$(".sliderInfo").fadeOut()',300);
+});
 
-
-    $(window).resize(function(){
+$('#main .top .info .one input').val(10);
+$('#main .mobile .two .row1 input').val(10);
+$(window).resize(function(){
         if($(window).width()<=400){
             $('#main .top .chart img').height(windowH*0.35);
         }else if($(window).width()<=500){
